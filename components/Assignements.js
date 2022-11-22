@@ -16,9 +16,9 @@ export default {
   data() {
     return {
       assignments: [
-        // { name: "Finish project", complete: false, id: 1, tag: "math" },
-        // { name: "Read Chapter 4", complete: false, id: 2, tag: "science" },
-        // { name: "Turn in Homework", complete: false, id: 3, tag: "math" },
+        { name: "Finish project", complete: false, id: 1, tag: "math" },
+        { name: "Read Chapter 4", complete: false, id: 2, tag: "science" },
+        { name: "Turn in Homework", complete: false, id: 3, tag: "math" },
       ],
     };
   },
@@ -34,13 +34,13 @@ export default {
     },
   },
 
-  created() {
-    fetch("http://localhost:3000/assignments")
-      .then((response) => response.json())
-      .then((assignments) => {
-        this.assignments = assignments;
-      });
-  },
+  // created() {
+  //   fetch("http://localhost:3000")
+  //     .then((response) => response.json())
+  //     .then((assignments) => {
+  //       this.assignments = assignments;
+  //     });
+  // },
 
   methods: {
     add(name) {
