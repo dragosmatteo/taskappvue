@@ -13,7 +13,11 @@ export default {
 
   data() {
     return {
-      assignments: [],
+      assignments: [
+        { name: "Finish project", complete: false, id: 1, tag: "math" },
+        { name: "Read Chapter 4", complete: false, id: 2, tag: "science" },
+        { name: "Turn in Homework", complete: false, id: 3, tag: "math" },
+      ],
       showCompleted: true,
     };
   },
@@ -29,13 +33,13 @@ export default {
     },
   },
 
-  created() {
-    fetch("https://taskappvue.vercel.app/db.json")
-      .then((response) => response.json())
-      .then((assignments) => {
-        this.assignments = assignments;
-      });
-  },
+  // created() {
+  //   fetch("https://taskappvue.vercel.app/db.json")
+  //     .then((response) => response.json())
+  //     .then((assignments) => {
+  //       this.assignments = assignments;
+  //     });
+  // },
 
   methods: {
     add(name) {
