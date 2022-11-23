@@ -30,7 +30,7 @@ export default {
   },
 
   created() {
-    fetch("http://localhost:3000/assignments")
+    fetch("https://taskappvue.vercel.app/db.json")
       .then((response) => response.json())
       .then((assignments) => {
         this.assignments = assignments;
